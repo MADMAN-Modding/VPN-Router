@@ -10,7 +10,6 @@ function list() {
 
     organizedNetworks += "\t<tr>\n\t\t<th>SSID</th>\n\t\t<th>Signal Strength</th>\n\t\t<th>Security</th>\n\t\t</tr>";
 
-
     for(let i = 0; i < Object.keys(jsonMap).length; i++) {
         organizedNetworks += "\n\t<tr>"
         organizedNetworks += '\n\t\t<td>' + jsonMap[i].ssid + '</td>';

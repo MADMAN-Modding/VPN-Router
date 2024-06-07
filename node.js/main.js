@@ -18,7 +18,7 @@ http.createServer(function (req, res) {
     // Sets the default file to index.html
     if (filename == "./") filename = "./index.html";
 
-    net.hotSpot();
+    // net.hotSpot();
 
     // Loads the requested file
     fs.readFile(filename, function(err, data) {

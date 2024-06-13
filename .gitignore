@@ -54,3 +54,4 @@ Thumbs.db
 npm-debug.log*
 
 *hostapd.conf
+/vendor/

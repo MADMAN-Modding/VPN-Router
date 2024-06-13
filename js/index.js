@@ -21,3 +21,25 @@ function list() {
 
     document.getElementById('organizedNetworks').innerHTML = organizedNetworks;
 }
+
+function startAP() {
+    var xmlHTTP = new XMLHttpRequest();
+
+    xmlHTTP.open("GET", "../php/connectAP.php?ssid='MyAccessPoint'&pass='12345678'");
+
+    xmlHTTP.send();
+}
+
+function restartAP() {
+    stopAP();
+
+    startAP();
+}
+
+function stopAP() {
+    var xmlHTTP = new XMLHttpRequest();
+
+    xmlHTTP.open("GET", "../php/stopAP.php?restart=true");
+
+    xmlHTTP.send();
+}

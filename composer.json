@@ -1,0 +1,13 @@
+{
+    "name": "madman-modding/vpn-router",
+    "type": "project",
+    "authors": [
+        {
+            "name": "MADMAN-Modding",
+            "email": "mad@kmdtech.net"
+        }
+    ],
+    "require": {
+        "network-manager/php-network-manager": "^1.0"
+    }
+}

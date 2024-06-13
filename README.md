@@ -1,1 +1,4 @@
-This aim of this project is to allow a pi to host a network, list other available networks, and then connect to vpn to allow devices without the ability to vpn, to connect to a vpn.
+<h1>Welcome to VPN Router!</h1>
+<h6>No, I could not come up with a better name</h6>
+
+The aim of this project is to allow devices that can't use openVPN, or don't have the permissions to run openVPN, to be able to connect to an openVPN server.

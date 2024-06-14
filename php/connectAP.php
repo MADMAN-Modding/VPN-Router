@@ -1,4 +1,4 @@
 <?php
-    $cmd = "sudo create_ap -m bridge wlx00259ca41e9a eno1 $_GET[ssid] $_GET[pass] > /dev/null &";
+    $cmd = "sudo create_ap -m bridge wlx00259ca41e9a eno1 $_GET[ssid] $_GET[pass] > /dev/null 2>/dev/null &";
 
     exec(sprintf($cmd));

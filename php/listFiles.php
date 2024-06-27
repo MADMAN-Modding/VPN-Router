@@ -1,45 +1,46 @@
 <?php
-    $lister = new ListFiles();
+$lister = new ListFiles();
 
-    $lister->videoOutput();
+$lister->configOutput();
 
-    class ListFiles {
-        public $directory = "../vpnConfigs";
+class ListFiles
+{
+    public $directory = "../vpnConfigs";
 
-        function videoOutput()
-        {
-            // Scans the videos
-            if ($videoFinder = opendir($this->directory)) {
-    
-                // Makes the videoList array
-                $videoList = [];
-    
-                // Reads the directory till the end
-                while (false !== ($video = readdir($videoFinder))) {
-                    // Adds each video to the list
-                    $videoList[] = $video;
-                }
-    
-                // Alphabetically sorts the videos
-                natsort($videoList);
-    
-                // Removes . and .. from the array
-                array_splice($videoList, 0, 2);
-    
-                // Closes the directory to save resources
-                closedir($videoFinder);
+    function configOutput()
+    {
+        // Scans the configs
+        if ($configFinder = opendir($this->directory)) {
+
+            // Makes the configList array
+            $configList = [];
+
+            // Reads the directory till the end
+            while (false !== ($config = readdir($configFinder))) {
+                // Adds each config to the list
+                $configList[] = $config;
             }
-    
-    
-            for ($i = 0; $i < count($videoList); $i++) {
-                    $this->load($videoList[$i]);
-            }
+
+            // Alphabetically sorts the configs
+            natsort($configList);
+
+            // Removes . and .. from the array
+            array_splice($configList, 0, 2);
+
+            // Closes the directory to save resources
+            closedir($configFinder);
         }
 
-        function load(String $video) {
-            // Echos the data and buttons for file handling, also changes the video name to look nice
-            echo "<h4 class=\"video\" id=\"$video\">$video<a href=\"videos/$video\" download><img src=\"images/Download Button.png\" class=\"download\"/></a>
-        <img src=\"images/Trash Button.png\" id=\"delete\" class=\"delete\" onclick='fileDelete(\"$video\")'/></h4> \n";
 
+        for ($i = 0; $i < count($configList); $i++) {
+            $this->load($configList[$i]);
+        }
     }
+
+    function load(String $config)
+    {
+        // Echos the data and buttons for file handling, also changes the config name to look nice
+        echo "<h4 class=\"config\" id=\"$config\">$config<a href=\"configs/$config\" download><img src=\"images/Download Button.png\" class=\"download\"/></a>
+        <img src=\"images/Trash Button.png\" id=\"delete\" class=\"delete\" onclick='removeFile(\"$config\")'/></h4> \n";
     }
+}

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link href="css/index.css" type="text/css" rel="stylesheet">
     <script src="js/index.js" defer></script>
+    <script src="js/fileHandling.js" defer></script>
 </head>
 
 <body>

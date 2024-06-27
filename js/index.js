@@ -1,4 +1,23 @@
-let jsonMap; 
+let jsonMap;
+
+var xhr = new XMLHttpRequest();
+
+xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+            document.getElementById("openVPNConfigurations").innerHTML =
+                xhr.responseText;
+        } else {
+            console.log('Error Code: ' + xhr.status);
+            console.log('Error Message: ' + xhr.statusText);
+        }
+    }
+}
+
+xhr.open('GET', 'php/listFiles.php');
+
+
+xhr.send();
 
 function list() {
     jsonMap = JSON.parse(document.getElementById('networks').innerHTML);

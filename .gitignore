@@ -1,3 +1,5 @@
 VPN-Router.code-workspace
 
 vpnConfigs/
+
+.vscode/

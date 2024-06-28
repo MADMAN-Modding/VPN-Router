@@ -40,7 +40,7 @@ class ListFiles
     function load(String $config)
     {
         // Echos the data and buttons for file handling, also changes the config name to look nice
-        echo "<h4 class=\"config\" id=\"$config\">$config<a href=\"configs/$config\" download><img src=\"images/Download Button.png\" class=\"download\"/></a>
+        echo "<h4 class=\"config\" id=\"$config\">$config<button onclick='connect(\"$config\")'>Connect</button>
         <img src=\"images/Trash Button.png\" id=\"delete\" class=\"delete\" onclick='removeFile(\"$config\")'/></h4> \n";
     }
 }

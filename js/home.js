@@ -16,7 +16,7 @@ function list() {
         organizedNetworks += '\n\t\t<td>' + jsonMap[i].signal + '</td>';
         organizedNetworks += '\n\t\t<td>' + jsonMap[i].security + '</td>';
         organizedNetworks += "\n\t</tr>"
-    }
+    }   
     organizedNetworks += '\n</table>';
 
     document.getElementById('organizedNetworks').innerHTML = organizedNetworks;

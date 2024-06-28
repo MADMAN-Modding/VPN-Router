@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <link href="css/index.css" type="text/css" rel="stylesheet">
     <script src="js/index.js" defer></script>
-    <script src="js/fileHandling.js" defer></script>
+    <script src="js/vpnHandler.js" defer></script>
+    <script src="js/fileHandler.js" defer></script>
 </head>
 
 <body>
@@ -30,4 +31,5 @@
         </form>
     </div>
     <div id="openVPNConfigurations"></div>
+    <div id="open"></div>
 </body>

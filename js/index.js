@@ -25,7 +25,7 @@ function list() {
 function startAP() {
     var xmlHTTP = new XMLHttpRequest();
 
-    xmlHTTP.open("GET", "../php/connectAP.php?ssid='MyAccessPoint'&pass='12345678'");
+    xmlHTTP.open("GET", "php/connectAP.php?ssid='MyAccessPoint'&pass='12345678'");
 
     xmlHTTP.send();
 }
@@ -39,7 +39,7 @@ function restartAP() {
 function stopAP() {
     var xmlHTTP = new XMLHttpRequest();
 
-    xmlHTTP.open("GET", "../php/stopAP.php?restart=true");
+    xmlHTTP.open("GET", "php/stopAP.php?restart=true");
 
     xmlHTTP.send();
 }

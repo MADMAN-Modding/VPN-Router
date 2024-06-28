@@ -1,10 +1,8 @@
-    var xhr = new XMLHttpRequest();
-
+var xhr = new XMLHttpRequest();
 
 list();
 
 function list() {
-
     response("openVPNConfigurations");
 
     xhr.open('GET', 'php/listFiles.php');
@@ -14,7 +12,9 @@ function list() {
 
 function removeFile(file) {
 
-    xhr.open('GET', 'php/deleteFile.php' + file);
+    console.log("php/deleteFile.php?file=" + file);
+
+    xhr.open('GET', "php/deleteFile.php?file=" + file);
 
     xhr.send();
 

@@ -9,12 +9,39 @@
     <script src="js/fileHandler.js" defer></script>
 </head>
 
+<?php
+
+session_start();
+
+if (!isset($_SESSION["auth"]) || $_SESSION["auth"] == false) {
+    echo $_SESSION["auth"];
+    print_r($_SESSION);
+
+?>
+
+    <body>
+        <h1>Login</h1>
+        <form action="php/login.php" method="post" enctype="multipart/form-data">
+
+            <p>Username</p>
+            <input type="text" name="username" id="username">
+
+            <p>Password</p>
+            <input type="password" name="password" id="password">
+            <br>
+            <input type="submit" value="Login">
+        </form>
+    </body>
+
+<?php
+    return;
+}
+?>
+
 <body>
     <h1>Welcome to <a href="https://github.com/MADMAN-Modding/VPN-Router" target="_blank">VPN-Router</a>, created by <a href="https://github.com/MADMAN-Modding" target="_blank">MADMAN-Modding</a></h1>
     <h2>The aim of this project is to allow devices that can't use openVPN, or don't have the permissions to run
         openVPN, to be able to connect to an openVPN server.</h2>
-    <!-- <div id="organizedNetworks"></div> -->
-    <!-- <button onclick="list()">List</button> -->
     <div style="text-align: center;">
         <h4>Hotspot Controls</h4>
         <button onclick="startAP()">Start Hotspot</button>

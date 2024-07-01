@@ -58,5 +58,4 @@ if (!isset($_SESSION["auth"]) || $_SESSION["auth"] == false) {
         </form>
     </div>
     <div id="openVPNConfigurations"></div>
-    <div id="open"></div>
 </body>

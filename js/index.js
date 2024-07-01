@@ -43,3 +43,13 @@ function stopAP() {
 
     xmlHTTP.send();
 }
+
+function logout() {
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "php/logout.php");
+
+    xhr.send();
+
+    // location.reload();
+}

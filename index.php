@@ -15,8 +15,6 @@ session_start();
 
 if (!isset($_SESSION["auth"]) || $_SESSION["auth"] == false) {
     echo $_SESSION["auth"];
-    print_r($_SESSION);
-
 ?>
 
     <body>
@@ -39,7 +37,7 @@ if (!isset($_SESSION["auth"]) || $_SESSION["auth"] == false) {
 ?>
 
 <body>
-    <h1>Welcome to <a href="https://github.com/MADMAN-Modding/VPN-Router" target="_blank">VPN-Router</a>, created by <a href="https://github.com/MADMAN-Modding" target="_blank">MADMAN-Modding</a></h1>
+    <h1>Welcome to <a href="https://github.com/MADMAN-Modding/VPN-Router" target="_blank">VPN-Router</a>, created by <a href="https://github.com/MADMAN-Modding" target="_blank">MADMAN-Modding</a><button onclick="logout()">Logout</button></h1>
     <h2>The aim of this project is to allow devices that can't use openVPN, or don't have the permissions to run
         openVPN, to be able to connect to an openVPN server.</h2>
     <div style="text-align: center;">

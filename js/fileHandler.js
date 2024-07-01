@@ -22,7 +22,6 @@ function removeFile(file) {
 }
 
 function response(id) {
-
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {

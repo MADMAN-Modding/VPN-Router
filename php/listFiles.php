@@ -2,10 +2,6 @@
 session_start();
 
 if ($_SESSION["auth"] == true) {
-    $lister = new ListFiles();
-
-    $lister->configOutput();
-
     class ListFiles
     {
         public $directory = "../vpnConfigs";
@@ -47,4 +43,7 @@ if ($_SESSION["auth"] == true) {
         <img src=\"images/Trash Button.png\" id=\"delete\" class=\"delete\" onclick='removeFile(\"$config\")'/></h4> \n";
         }
     }
+    $lister = new ListFiles();
+
+    $lister->configOutput();
 }

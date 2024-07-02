@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 if ($_SESSION["auth"] == true) {
     $targetDir = "../vpnConfigs/";
     $targetFile = $targetDir . basename($_FILES["fileToUpload"]["name"]);

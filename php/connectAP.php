@@ -1,6 +1,9 @@
 <?php
+session_start();
+
 if ($_SESSION["auth"] == true) {
-    $cmd = "sudo create_ap -m bridge $_GET[apHost] $_GET[interface] $_GET[ssid] $_GET[pass] > /dev/null 2>/dev/null &";
+    $cmd = "sudo create_ap -m bridge $_GET[apHost] $_GET[interface] $_GET[ssid] $_GET[pass]";
 
     exec(sprintf($cmd));
 }
+//  > /dev/null 2>/dev/null &

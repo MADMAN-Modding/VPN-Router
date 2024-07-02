@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 if ($_SESSION["auth"] == true) {
     echo ("sudo openvpn --config \"../vpnConfigs/$_GET[config]\" --auth-user-pass ../auth/\"$_GET[config].auth\"");
 }

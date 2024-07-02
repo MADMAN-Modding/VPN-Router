@@ -1,3 +1,4 @@
+// This function tells the openVPN connect file what config to use
 function connect(config) {
     var xhr = new XMLHttpRequest();
 

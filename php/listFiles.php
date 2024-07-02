@@ -1,9 +1,11 @@
 <?php
 session_start();
 
+// Checks authentication
 if ($_SESSION["auth"] == true) {
     class ListFiles
     {
+        // Sets the directory to search
         public $directory = "../vpnConfigs";
 
         function configOutput()
@@ -30,7 +32,7 @@ if ($_SESSION["auth"] == true) {
                 closedir($configFinder);
             }
 
-
+            // List every file found
             for ($i = 0; $i < count($configList); $i++) {
                 $this->load($configList[$i]);
             }
@@ -38,7 +40,7 @@ if ($_SESSION["auth"] == true) {
 
         function load(String $config)
         {
-            // Echos the data and buttons for file handling, also changes the config name to look nice
+            // Echos the data and buttons for file handling
             echo "<h4 class=\"config\" id=\"$config\">$config<button onclick='connect(\"$config\")'>Connect</button>
         <img src=\"images/Trash Button.png\" id=\"delete\" class=\"delete\" onclick='removeFile(\"$config\")'/></h4> \n";
         }

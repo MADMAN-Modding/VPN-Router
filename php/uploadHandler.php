@@ -1,7 +1,9 @@
 <?php
 session_start();
 
+// Authentication validation
 if ($_SESSION["auth"] == true) {
+    // What directory to upload to
     $targetDir = "../vpnConfigs/";
     $targetFile = $targetDir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;

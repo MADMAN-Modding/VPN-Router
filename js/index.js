@@ -25,8 +25,7 @@ function list() {
 function startAP() {
     var xmlHTTP = new XMLHttpRequest();
 
-    xmlHTTP.open("GET", "php/connectAP.php?ssid='MyAccessPoint'&pass='12345678'&apHost='wlp1s0'&interface='tun0'");
-
+    xmlHTTP.open("GET", "php/connectAP.php?ssid='MyAccessPoint'&pass='12345678'&apHost='wlp1s0'&interface='eno1'");
     xmlHTTP.send();
 }
 

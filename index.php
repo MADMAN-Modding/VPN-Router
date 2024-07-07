@@ -7,6 +7,7 @@
     <script src="js/index.js" defer></script>
     <script src="js/vpnHandler.js" defer></script>
     <script src="js/fileHandler.js" defer></script>
+    <script src="js/wifiHandling.js" defer></script>
 </head>
 
 <?php
@@ -56,4 +57,5 @@ if (!isset($_SESSION["auth"]) || $_SESSION["auth"] == false) {
         </form>
     </div>
     <div id="openVPNConfigurations"></div>
+    <div id="networks"></div>
 </body>
